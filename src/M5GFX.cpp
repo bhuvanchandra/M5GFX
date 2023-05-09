@@ -571,7 +571,7 @@ namespace m5gfx
 
     if (nvs_board != board) {
       if (0 == nvs_open(LIBRARY_NAME, NVS_READWRITE, &nvs_handle)) {
-        ESP_LOGI(LIBRARY_NAME, "[Autodetect] save to NVS : board:%" PRIu32, board);
+        ESP_LOGI(LIBRARY_NAME, "[Autodetect] save to NVS : board:%d" PRIu32, board);
         nvs_set_u32(nvs_handle, NVS_KEY, board);
         nvs_close(nvs_handle);
       }
